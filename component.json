@@ -1,5 +1,6 @@
 {
   "name": "start-stop.sh",
+  "repo": "simonwade/start-stop.sh",
   "version": "1.0.0",
   "main": "start-stop.sh"
 }
