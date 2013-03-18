@@ -8,13 +8,13 @@ startStop() {
     exit 1
   fi
   if [ -f "$pidFile" ]; then
-    pid=`cat $pidFile`
+    pid=`cat "$pidFile"`
   fi
   if [ "$action" == "stop" -o "$action" == "restart" ]; then
     if [ "$pid" ]; then
       kill $pid && echo "Stopped $name" && sleep 1
-      if [ -f $pidFile ]; then
-        rm $pidFile
+      if [ -f "$pidFile" ]; then
+        rm "$pidFile"
       fi
     elif [ "$action" == "stop" ]; then
       echo "Failed to stop $name: no PID found in $pidFile"
