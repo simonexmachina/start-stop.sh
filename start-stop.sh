@@ -23,8 +23,6 @@ startStop() {
       exit $?
     fi
   elif [ "$pid" ]; then
-    echo "Failed to $action $name: PID file $pidFile already exists"
-    echo "Run '$command <stop|restart>' to $action $name"
-    exit 1
+    echo "PID file $pidFile already exists"
   fi
 }
